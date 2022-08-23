@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout04</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        body {
+            background-color: #4C320D;
+        }
+
+        #wrap {
+            width: 800px;
+            margin: auto;
+        }
+
+        #top {
+            background-image: url("img/top.jpg");
+            width: 800px;
+            height: 10px;
+        }
+
+        #header {
+            background-image: url("/img/header.jpg");
+            width: 800px;
+            height: 100px;
+            /* padding이 포함되지 않은 800px 을 맞춰줌 */
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        #menu {
+            background-image: url("/img/menu.jpg");
+            width: 800px;
+            height: 30px;
+            box-sizing: border-box;
+            padding-left: 20px;
+        }
+
+        #content {
+            background-image: url("/img/content.jpg");
+            width: 800px;
+            height: 500px;
+            box-sizing: border-box;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        #bottom {
+            background-image: url("img/bottom.jpg");
+            width: 800px;
+            height: 20px;
+        }
+
+        #img01 {
+            margin: 20px;
+
+        }
+
+        #article {
+            width: 600px;
+            box-sizing: border-box;
+            float: left;
+        }
+
+        #aside {
+            width: 130px;
+            box-sizing: border-box;
+            float: left;
+            padding-left: 50px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="wrap">
+        <div id="top"></div>
+        <div id="header">
+            <h1>TIS.EDU</h1>
+        </div>
+        <div id="menu">
+            HOME | ABOUT | HISTORY | CONTACT
+        </div>
+        <div id="content">
+            <div id="article">
+                <h3>TIS정보기술교육센터 소개</h3>
+                <img id="img01" src="/img/tistitle 1.png" alt="tistitle">
+                <p>
+                    TIS정보기술교육센터르 정부 지원 교육센터입니다.
+                </p>
+            </div>
+            <div id="aside">
+                <h3>교육과정</h3>
+                <ul>
+                    <li>JAVA</li>
+                    <li>HTML</li>
+                    <li>JAVASCRIPT</li>
+                </ul>
+            </div>
+        </div>
+        <div id="bottom"></div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap</title>
+    <!-- Bootstrap ----------------------------------------------------------------------------------->
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <!-- Bootstrap -->
+    <style>
+        [class*=col-sm] {
+            height: 50px;
+        }
+
+        @font-face {
+            font-family: bsfont1;
+            src: url("/font/GreatVibes-Regular.otf");
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid" style="font-family: bsfont1;">
+        <h1>Hello World!</h1>
+        <p>Resize the browser window to see the effect.</p>
+        <p>The columns will automatically stack on top of each other when the screen is less than 768px wide.</p>
+        <div class="row">
+            <!-- col-sm-(다 더해서 12가 되어야한다.) -->
+            <div class="col-sm-4" style="background-color: red;">.col-sm-4</div>
+            <div class="col-sm-4" style="background-color:blue;">.col-sm-4</div>
+            <div class="col-sm-4" style="background-color:green;">.col-sm-4</div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-sm-4" style="background-color: orange;">.col-sm-4</div>
+        <div class="col-sm-8" style="background-color: purple;">.col-sm-8</div>
+    </div>
+
+    <h1>TIS정보교육기술센터<small>TIS.EDU</small></h1>
+
+    <!-- 부트스트랩활용 로그인 창 -->
+    <button type="button" class="btn btn-default">Default</button>
+    <button type="button" class="btn btn-primary">Primary</button>
+    <input type="button" class="btn btn-danger" value="danger">
+    <a href="/html_workspace_past/layout01.html" class="btn btn-info">info</a>
+    <form action="/login.jsp" method="post">
+        <!-- form-group 으로 줄 바꿈 -->
+        <div class="form-group">
+            <label for="email">Email address:</label>
+            <input type="email" class="form-control" id="email">
+        </div>
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="password" class="form-control" id="pwd">
+        </div>
+        <div class="checkbox">
+            <label><input type="checkbox"> 자동로그인 </label>
+        </div>
+        <button type="submit" class="btn btn-default">로그인</button>
+    </form>
+
+</body>
+
+</html>

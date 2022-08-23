@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css4</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <style>
+        body {
+            font-size: 30px;
+        }
+
+        /* 전체 페이지 여백 삭제 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        #box1 {
+            background-color: red;
+        }
+
+        #box1:hover {
+            background-color: blue;
+        }
+
+        /* 투명도 설정 */
+        #pic01 {
+            width: 100px;
+            opacity: 0.5;
+        }
+
+        #pic01:hover {
+            opacity: 1.0;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            /* 스크롤바 옵션 */
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: #111;
+        }
+
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #ffffff;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            /* padding: 12px 16px; */
+            z-index: 1;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown span {
+            background-color: black;
+            color: white;
+            display: inline-block;
+        }
+
+        .dropdown-content p {
+            background-color: black;
+            color: white;
+            display: block
+        }
+
+        #box2 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            left: 20px;
+            top: 20px;
+            box-sizing: border-box;
+        }
+
+        #box3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: relative;
+            left: 100px;
+            /* 위치를 잡는 함수로 left top 주는것과 같다. */
+            /* transform: translate(50px, 50px); */
+            /* rotate 주는 함수 */
+            /* transform: rotate(45deg); */
+            /* 배율을 주는 함수로 X축, Y축 파라미터 */
+            /* transform: scale(2, 2); */
+            /* X축, Y축 기준으로 기울어짐 */
+            /* transform: skew(10deg, 10deg); */
+        }
+
+        #box4 {
+            width: 150px;
+            height: 150px;
+            background: red;
+            /* 애니메이션 전환 시간 스타트에 작성*/
+            transition: 5s;
+        }
+
+        #box4:hover {
+            width: 300px;
+            background-color: green;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="box1">css4</div>
+    <img id="pic01" src="/img/picture02.jpg" alt="cloud">
+
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#about">About</a></li>
+    </ul>
+
+    <div class="dropdown">
+        <span>개설강좌</span>
+        <div class="dropdown-content">
+            <p>JAVA</p>
+            <p>HTML</p>
+            <p>ORACLE</p>
+        </div>
+    </div>
+    <div class="dropdown">
+        <span>강좌내용</span>
+        <div class="dropdown-content">
+            <p>1장</p>
+            <p>2장</p>
+            <p>3장</p>
+        </div>
+    </div>
+
+    <!-- 검색창 만들기 -->
+    <form action="search.jsp">
+        <input type="text" id="search">
+        <input type="submit" value="search">
+    </form>
+    <div id="box2">box2</div>
+    <div id="box3">box3</div>
+
+    <div id="box4">box4</div>
+
+</body>
+
+</html>

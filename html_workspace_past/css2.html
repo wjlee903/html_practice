@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS2</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+
+
+    <style>
+        /* 위부터 시계방향 top right bottom left 
+        3개 일때 top (right,left) bottom
+        2개 일때 (top, bottom) (right, left)*/
+        /* div {
+            border-style: solid dashed dotted double;
+            border-color: red blue green pink;
+            border-width: 10px;
+        } */
+
+        /* p {
+            border-style: dashed solid;
+            border-color: red maroon;
+        } */
+
+        h1 {
+            border: 1px solid black;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            font-family: 'Nanum Pen Script', cursive;
+        }
+
+        #box1 {
+            border-left-style: solid;
+            border-left-width: 5px;
+            border-left-color: green;
+            padding: 20px;
+            background-color: black;
+            outline-style: dotted;
+            outline-color: yellow;
+        }
+
+        #box2 {
+            border: 1px solid white;
+            border-radius: 10px;
+        }
+
+        #box3 {
+            height: 20px;
+            width: 70px;
+            border: 5px solid white;
+            padding: 20px;
+            /* 박스를 가운데 정렬할때 쓴다. */
+            margin: auto;
+            margin-top: 20px;
+            /* box-shadow: 5px 5px 10px white; */
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        p {
+            /* text-decoration: underline;
+            text-decoration: overline;
+            text-decoration: line-through; */
+            /* 글자와 글자사이 간격 */
+            font-size: 30px;
+            letter-spacing: 10px;
+            font-family: 'Nanum Pen Script', cursive;
+            /* 그림자 주기 겹쳐서 할수 있다.*/
+            color: white;
+            text-shadow: 5px 5px 10px white, 5px 5px 10px green;
+        }
+
+        #bg1{background-color: red;}
+        .bg2{color: blue; background-color: green;}
+    </style>
+</head>
+
+<body>
+    <div>
+        CSS3
+    </div>
+    <p>borderstyle</p>
+
+    <h1>HCSSH</h1>
+
+    <div id="box1">DIVBOXCSS3</div>
+    <div id="box2">BOX2CSS3</div>
+    <div id="box3">BOX3CSS3</div>
+
+    <p>THIS IS APPLE THIS IS PINEAPPLE</p>
+
+    <div id="bg1">BG!</div>
+    <div class="bg2">BG2</div>
+
+</body>
+
+</html>

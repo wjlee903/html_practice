@@ -1,0 +1,12 @@
+:root {
+    --body-backcolor: black;
+    --body-fortcolor: white;
+}
+
+body {
+    background-color: var(--body-backcolor);
+    /* 투명도 */
+    opacity: 0.8;
+    color: var(--body-fortcolor);
+
+}

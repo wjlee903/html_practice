@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+    <link rel="stylesheet" href="css/style.css"> <!-- external 방식 파일형식으로 저장 -->
+    <!-- 글로벌 방식 스타일 작성 -->
+    <!-- 공통된 스타일 작성할때 -->
+    <style>
+        /* 모든 엘리먼트 여백 삭제 */
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        /* 백그라운드를 이미지 반복으로 채움 */
+        body {
+            background-image: url(/img/bg1.jpg);
+            /* 반복안함 */
+            background-repeat: no-repeat;
+            /* 위치 편집 */
+            background-position: left top;
+            /* 백그라운드 고정 */
+            background-attachment: fixed;
+        }
+        body{background: red url("img/bg1.jpg") no-repeat right top;}
+
+        /* internal 방식으로 현재 페이지에만 적용할때
+        전체 페이지 적용할때는 external 방식으로 파일로 저장할수 있다. */
+        h1 {
+            color: blue;
+            font-size: 30px;
+        }
+
+        p {
+            color: red;
+            text-align: center;
+        }
+
+        /* id selector */
+        /* text-align 정렬 방식 선택 */
+        #para1 {
+            color: orange;
+        }
+
+        /* class selector */
+        .center {
+            text-align: center;
+            font-size: 60px;
+        }
+
+        /* 따로 select 할수 있다.*/
+        p.center {
+            color: purple;
+            font-size: 30px;
+        }
+
+        /* grouping selector */
+        div,
+        span {
+            color: red;
+        }
+
+        /* div 안에 있는 i 태그에 모두 적용 */
+        div i {
+            color: red;
+        }
+
+        /* 바로 밑에 자식 태그에 적용 */
+        div>i {
+            color: cyan;
+        }
+
+        /* div 바로 다음에 오늘 p 태그에 적용 */
+        div+p {
+            color: purple;
+            font-size: 40px;
+            font-style: italic;
+        }
+
+
+        div~b {
+            color: #574848;
+        }
+
+        div {
+            color: white !important;
+        }
+
+        /* 최우선 적용사항 강력함 */
+    </style>
+</head>
+
+<body>
+    <!-- 인라인 방식 CSS 코드 작성 태그 옆에 작성하는법 
+        글로벌 보다 인라인방식이 우선순위가 높다.-->
+    <h1 style="color: red; font-size: 60px;">CSS3</h1>
+    <h1>CSS3</h1>
+    <h1>CSS3</h1>
+
+    <p>CSS is Cascading Styke sheets</p>
+    <p>CSS is language for style</p>
+
+    <p id="para1">CSS is FOR</p>
+    <h1 class="center">CSS33</h1>
+    <p class="center">CSS33<p3>
+
+            <div>CSS123</div>
+            <span>CSS123</span>
+
+            <div>
+                <i>CSS1
+                    <p>CSS2 <br>
+                        <i>CSS3</i>
+                    </p>
+                </i>
+            </div>
+            <p>div다음p태그</p>
+            <i>CSS4</i>
+
+            <div>
+                <p>div안에p</p>
+            </div>
+            <b>b태그</b>
+            <em style="color: rgb(65, 52 185);">RGBinline</em>
+            <em style="color: rgba(65, 52 185, 0.5);">RGBinline</em>
+
+</body>
+
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+    <!-- 아이콘 다운받지 않고 url에서 가져와서 사용하는 방식 -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    
+
+    <style>
+        /* 폰트 설정 및 닉네임 적용 */
+        @font-face {
+            font-family: BMJUA;
+            /* 폰트 닉네임 설정 */
+            src: url("/font/BMJUA_ttf.ttf");
+        }
+
+        /* 폰트 적용 */
+        h1 {
+            font-family: BMJUA;
+        }
+
+        .fas {
+            font-size: 50px;
+            color: red;
+        }
+
+        /*a {
+            font-size: 30px;
+             링크의 밑줄 설정 
+            text-decoration: none;
+            color: #1856dd;
+        }*/
+
+        /* 링크 위에 마우스 올렸을때  */
+        /*a:hover {
+            color: hotpink;
+            background-color: aqua;
+        }*/
+
+        a:link,
+        a:visited,
+        div {
+            background-color: #f44336;
+            color: white;
+            padding: 14px 25px;
+            text-align: center;
+            text-decoration: none;
+            /* display 속성 inline:글자크기에 맞게만(width 설정 못함)  */
+            /* block 속성은 박스 크기 */
+            /* inline은 줄이 바귀지 않느다. */
+            display: inline-block;
+        }
+
+        a:hover,
+        a:active,
+        div:hover {
+            background-color: red;
+        }
+
+        table {
+            text-align: center;
+            /* 기본 테이블은 2줄로 형태이지만 한줄로 바꿔주는 방법 */
+            border-collapse: collapse;
+        }
+        /* id가 table1 인 th td에 border bottom에만 solid */
+        #table1 th,
+        #table1 td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS-Cascading Style Sheets</h1>
+    <!-- 아이콘은 italic 체를 사용하는게 일반적이다. -->
+    <!-- 버전에 따라서 fas 와 fa 를 사용한다. -->
+    <i class="fas fa-cloud"></i>
+    <i class="fas fa-heart"></i>
+    <i class="fas fa-car"></i>
+    <i class="fas fa-file"></i>
+    <i class="fas fa-bars"></i>
+    <br>
+    <a href="index.html">home</a>
+    <a href="css.html">css</a>
+    <!-- 링크일 때만 손가락 모양이 나타나기 때문에
+        링크가 아니라면 cursor로 포인터를 주어야한다. -->
+    <div style="cursor: pointer;">CSS3</div>
+    <table width="50%" id="table1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <table border="1px" width="50%" height="100px">
+        <tr>
+            <td style="font-weight: bold;">1</td>
+            <th>2</th> <!-- th는 가운데 정렬이면서 볼드체가 기본값 -->
+        </tr>
+        <tr>
+            <td valign="top">3</td>
+            <td style="vertical-align: top;">4</td>
+        </tr>
+    </table>
+    <br>
+    <table width="50%" height="100px" border="1px">
+        <tr>
+            <td colspan="2">1</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <table width="50%" height="100px" border="1px">
+        <tr>
+            <td rowspan="2">1</td>
+            <td>2</td>
+        </tr>
+        <tr>
+            <td>4</td>
+        </tr>
+    </table>
+    <br>
+    <!-- colspan(행) rowspan(열) 으로 셀 병합 -->
+    <table width="50%" height="100px" border="1px">
+        <tr>
+            <td colspan="2">1</td> <!-- 2는 합칠 칸의 갯수 -->
+            <!-- <td>2</td> -->
+        </tr>
+        <tr>
+            <td>3</td>
+            <td rowspan="2">4</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <!-- <td>6</td> -->
+        </tr>
+        <tr>
+            <td colspan="2">7</td>
+            <!-- <td>8</td> -->
+        </tr>
+    </table>
+
+</body>
+
+</html>
